@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230527 08:48:20.868" rpa="false" schemaversion="3">
+<suite id="s1" name="Form" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\form.robot">
+<test id="s1-t1" name="Cenario 01: Abrir site" line="25">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://itera-qa.azurewebsites.net/home/automation</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230527 08:48:21.067" level="INFO">Opening browser 'chrome' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
+<status status="PASS" starttime="20230527 08:48:21.067" endtime="20230527 08:48:25.006"/>
+</kw>
+<status status="PASS" starttime="20230527 08:48:21.067" endtime="20230527 08:48:25.014"/>
+</test>
+<test id="s1-t2" name="Cenario 02: Preencher formulario" line="28">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_name}</arg>
+<arg>Vitor</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:25.014" level="INFO">Typing text 'Vitor' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20230527 08:48:25.014" endtime="20230527 08:48:25.107"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_phone}</arg>
+<arg>text=(11) 98680-3400</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:25.107" level="INFO">Typing text '(11) 98680-3400' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20230527 08:48:25.107" endtime="20230527 08:48:25.180"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<arg>text=vitor.devichu@hotmail.chrome</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:25.180" level="INFO">Typing text 'vitor.devichu@hotmail.chrome' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20230527 08:48:25.180" endtime="20230527 08:48:25.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>text=FFFHHHIII</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:25.244" level="INFO">Typing text 'FFFHHHIII' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230527 08:48:25.244" endtime="20230527 08:48:25.303"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_addres}</arg>
+<arg>text=Rua Tal numero tal</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:25.303" level="INFO">Typing text 'Rua Tal numero tal' into text field 'id:address'.</msg>
+<status status="PASS" starttime="20230527 08:48:25.303" endtime="20230527 08:48:25.367"/>
+</kw>
+<status status="PASS" starttime="20230527 08:48:25.014" endtime="20230527 08:48:25.367"/>
+</test>
+<test id="s1-t3" name="Cenario 03: Clicar em submit" line="35">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:25.367" level="INFO">Clicking element 'name:submit'.</msg>
+<status status="PASS" starttime="20230527 08:48:25.367" endtime="20230527 08:48:25.407"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230527 08:48:30.408" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230527 08:48:25.407" endtime="20230527 08:48:30.408"/>
+</kw>
+<status status="PASS" starttime="20230527 08:48:25.367" endtime="20230527 08:48:30.408"/>
+</test>
+<test id="s1-t4" name="Cenario 04: Clicar em check-box" line="39">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:30.409" level="INFO">Clicking element 'id:male'.</msg>
+<status status="PASS" starttime="20230527 08:48:30.409" endtime="20230527 08:48:30.449"/>
+</kw>
+<status status="PASS" starttime="20230527 08:48:30.409" endtime="20230527 08:48:30.449"/>
+</test>
+<test id="s1-t5" name="Cenario 05: Clicar em contains" line="42">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_contains}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:30.449" level="INFO">Clicking element '//input[@type='checkbox'][1]'.</msg>
+<status status="PASS" starttime="20230527 08:48:30.449" endtime="20230527 08:48:30.481"/>
+</kw>
+<status status="PASS" starttime="20230527 08:48:30.449" endtime="20230527 08:48:30.481"/>
+</test>
+<test id="s1-t6" name="Cenario 06: Clicar em contains" line="45">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_contains}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:30.489" level="INFO">Clicking element '//select[contains(@class,'custom-select')]'.</msg>
+<status status="PASS" starttime="20230527 08:48:30.489" endtime="20230527 08:48:30.537"/>
+</kw>
+<status status="PASS" starttime="20230527 08:48:30.489" endtime="20230527 08:48:30.537"/>
+</test>
+<test id="s1-t7" name="Cenario 07: Clicar" line="48">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${option_value}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:30.537" level="INFO">Clicking element '//option[@value='1']'.</msg>
+<status status="PASS" starttime="20230527 08:48:30.537" endtime="20230527 08:48:30.569"/>
+</kw>
+<status status="PASS" starttime="20230527 08:48:30.537" endtime="20230527 08:48:30.569"/>
+</test>
+<test id="s1-t8" name="Cenario 08: Clicar no checkbox e radiobutton" line="54">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${check_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:30.569" level="INFO">Clicking element '//label[@class='custom-control-label'][contains(.,'2 years')]'.</msg>
+<status status="PASS" starttime="20230527 08:48:30.569" endtime="20230527 08:48:30.617"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${radio_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230527 08:48:30.617" level="INFO">Clicking element '//label[@class='custom-control-label'][contains(.,'Selenium Webdriver')]'.</msg>
+<status status="PASS" starttime="20230527 08:48:30.617" endtime="20230527 08:48:30.649"/>
+</kw>
+<status status="PASS" starttime="20230527 08:48:30.569" endtime="20230527 08:48:30.649"/>
+</test>
+<status status="PASS" starttime="20230527 08:48:20.868" endtime="20230527 08:48:30.657"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Form">Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
