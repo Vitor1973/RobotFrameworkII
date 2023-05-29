@@ -26,6 +26,7 @@ Cenario 01: Abrir site
     Open Browser    https://itera-qa.azurewebsites.net/home/automation    chrome
 
 Cenario 02: Preencher formulario
+    
     Input Text      ${input_name}         Vitor
     Input Text      ${input_phone}        text=(11) 98680-3400
     Input Text      ${input_email}        text=vitor.devichu@hotmail.chrome
@@ -56,10 +57,5 @@ Cenario 08: Clicar no checkbox e radiobutton
     Click Element    ${radio_button}
     
   
-
-
-
-
-
 
 
