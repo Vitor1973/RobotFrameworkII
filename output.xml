@@ -1,58 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230527 21:59:21.305" rpa="false" schemaversion="3">
-<suite id="s1" name="Testes" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\testes">
-<suite id="s1-s1" name="Form" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\testes\form.robot">
-<test id="s1-s1-t1" name="Cenario 02: Preencher formulario" line="28">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_name}</arg>
-<arg>Vitor</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230527 21:59:21.481" level="INFO">Typing text 'Vitor' into text field 'id:name'.</msg>
-<msg timestamp="20230527 21:59:21.481" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20230527 21:59:21.481" level="FAIL">No browser is open.</msg>
-<status status="FAIL" starttime="20230527 21:59:21.481" endtime="20230527 21:59:21.481"/>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230530 23:36:29.890" rpa="false" schemaversion="3">
+<suite id="s1" name="Bdd" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\bdd.robot">
+<test id="s1-t1" name="Cenario 01: Executar video no site do you Tube" line="42">
+<kw name="Dado que acesso o site do you Tube">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230530 23:36:30.095" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20230530 23:36:30.095" endtime="20230530 23:36:36.056"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_phone}</arg>
-<arg>text=(11) 98680-3400</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230527 21:59:21.481" endtime="20230527 21:59:21.481"/>
+<status status="PASS" starttime="20230530 23:36:30.095" endtime="20230530 23:36:36.056"/>
 </kw>
+<kw name=" Quando digito o nome da musica">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_email}</arg>
-<arg>text=vitor.devichu@hotmail.chrome</arg>
+<arg>${Input_Pesquisa}</arg>
+<arg>${NomeDaMusica}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230527 21:59:21.481" endtime="20230527 21:59:21.481"/>
+<msg timestamp="20230530 23:36:36.056" level="INFO">Typing text 'Ariana Grande Positions' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20230530 23:36:36.056" endtime="20230530 23:36:36.208"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${input_password}</arg>
-<arg>text=FFFHHHIII</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230527 21:59:21.481" endtime="20230527 21:59:21.481"/>
+<status status="PASS" starttime="20230530 23:36:36.056" endtime="20230530 23:36:36.208"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${text_addres}</arg>
-<arg>text=Rua Tal numero tal</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230527 21:59:21.481" endtime="20230527 21:59:21.481"/>
+<kw name=" E clico no botao buscar">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230530 23:36:36.208" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<status status="PASS" starttime="20230530 23:36:36.208" endtime="20230530 23:36:36.316"/>
 </kw>
-<tag>regressivo</tag>
-<status status="FAIL" starttime="20230527 21:59:21.481" endtime="20230527 21:59:21.481">No browser is open.</status>
+<status status="PASS" starttime="20230530 23:36:36.208" endtime="20230530 23:36:36.316"/>
+</kw>
+<kw name="E clico na primeira opcao da lista">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Class_Primeiro}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230530 23:36:36.316" endtime="20230530 23:36:37.394"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Class_Primeiro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230530 23:36:37.394" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
+<status status="PASS" starttime="20230530 23:36:37.394" endtime="20230530 23:36:37.554"/>
+</kw>
+<status status="PASS" starttime="20230530 23:36:36.316" endtime="20230530 23:36:37.554"/>
+</kw>
+<kw name="Então o video e executado">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230530 23:36:37.554" endtime="20230530 23:36:38.576"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230530 23:36:38.726" level="INFO">Element '(//*[@id="top-level-buttons-computed"]/ytd-button-renderer)[1]' is displayed.</msg>
+<status status="PASS" starttime="20230530 23:36:38.576" endtime="20230530 23:36:38.726"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230530 23:36:39.727" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230530 23:36:38.726" endtime="20230530 23:36:39.727"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230530 23:36:39.727" endtime="20230530 23:36:42.022"/>
+</kw>
+<status status="PASS" starttime="20230530 23:36:37.554" endtime="20230530 23:36:42.022"/>
+</kw>
+<status status="PASS" starttime="20230530 23:36:30.093" endtime="20230530 23:36:42.022"/>
 </test>
-<status status="FAIL" starttime="20230527 21:59:21.337" endtime="20230527 21:59:21.481"/>
-</suite>
-<status status="FAIL" starttime="20230527 21:59:21.305" endtime="20230527 21:59:21.481"/>
+<status status="PASS" starttime="20230530 23:36:29.890" endtime="20230530 23:36:42.028"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">regressivo</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Testes">Testes</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Form">Testes.Form</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Bdd">Bdd</stat>
 </suite>
 </statistics>
 <errors>

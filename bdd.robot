@@ -40,7 +40,7 @@ Então o video e executado
 
 *** Test Cases ***
 Cenario 01: Executar video no site do you Tube
-    [Tags]   regressivo
+    # [Tags]   regressivo
     Dado que acesso o site do you Tube
     Quando digito o nome da musica
     E clico no botao buscar
