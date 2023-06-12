@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230612 10:03:52.502" rpa="false" schemaversion="3">
+<suite id="s1" name="Testes" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\testes">
+<suite id="s1-s1" name="Bdd" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\testes\bdd.robot">
+<test id="s1-s1-t1" name="Cenario 01: Executar video no site do you Tube" line="42">
+<kw name="Dado que acesso o site do you Tube">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230612 10:03:52.716" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20230612 10:03:52.716" endtime="20230612 10:03:58.175"/>
+</kw>
+<status status="PASS" starttime="20230612 10:03:52.716" endtime="20230612 10:03:58.175"/>
+</kw>
+<kw name=" Quando digito o nome da musica">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Pesquisa}</arg>
+<arg>${NomeDaMusica}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 10:03:58.177" level="INFO">Typing text 'Ariana Grande Positions' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20230612 10:03:58.176" endtime="20230612 10:03:58.287"/>
+</kw>
+<status status="PASS" starttime="20230612 10:03:58.176" endtime="20230612 10:03:58.287"/>
+</kw>
+<kw name=" E clico no botao buscar">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 10:03:58.288" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<status status="PASS" starttime="20230612 10:03:58.288" endtime="20230612 10:03:58.419"/>
+</kw>
+<status status="PASS" starttime="20230612 10:03:58.288" endtime="20230612 10:03:58.419"/>
+</kw>
+<kw name="E clico na primeira opcao da lista">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Class_Primeiro}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230612 10:03:58.420" endtime="20230612 10:03:59.619"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Class_Primeiro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 10:03:59.621" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
+<status status="PASS" starttime="20230612 10:03:59.619" endtime="20230612 10:03:59.750"/>
+</kw>
+<status status="PASS" starttime="20230612 10:03:58.420" endtime="20230612 10:03:59.750"/>
+</kw>
+<kw name="Então o video e executado">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230612 10:03:59.751" endtime="20230612 10:04:00.656"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230612 10:04:00.743" level="INFO">Element '(//*[@id="top-level-buttons-computed"]/ytd-button-renderer)[1]' is displayed.</msg>
+<status status="PASS" starttime="20230612 10:04:00.656" endtime="20230612 10:04:00.743"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230612 10:04:01.744" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230612 10:04:00.743" endtime="20230612 10:04:01.744"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230612 10:04:01.744" endtime="20230612 10:04:04.082"/>
+</kw>
+<status status="PASS" starttime="20230612 10:03:59.751" endtime="20230612 10:04:04.082"/>
+</kw>
+<tag>regressivo</tag>
+<status status="PASS" starttime="20230612 10:03:52.715" endtime="20230612 10:04:04.084"/>
+</test>
+<status status="PASS" starttime="20230612 10:03:52.526" endtime="20230612 10:04:04.088"/>
+</suite>
+<suite id="s1-s2" name="Estrutura" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\testes\estrutura.robot">
+<test id="s1-s2-t1" name="Cenario 01: Abri site" line="17">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230612 10:04:04.106" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20230612 10:04:04.105" endtime="20230612 10:04:06.420"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230612 10:04:06.420" endtime="20230612 10:04:08.496"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:04.104" endtime="20230612 10:04:08.498"/>
+</test>
+<test id="s1-s2-t2" name="Cenario 02: Abrir site Alura" line="21">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.alura.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230612 10:04:08.504" level="INFO">Opening browser 'chrome' to base url 'https://www.alura.com.br/'.</msg>
+<status status="PASS" starttime="20230612 10:04:08.503" endtime="20230612 10:04:12.851"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230612 10:04:12.852" endtime="20230612 10:04:15.139"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:08.501" endtime="20230612 10:04:15.140"/>
+</test>
+<test id="s1-s2-t3" name="Cenario 03: Abrir site You Tube" line="25">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.youtube.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230612 10:04:15.146" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20230612 10:04:15.145" endtime="20230612 10:04:19.634"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230612 10:04:19.634" endtime="20230612 10:04:21.760"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:15.144" endtime="20230612 10:04:21.761"/>
+</test>
+<status status="PASS" starttime="20230612 10:04:04.092" endtime="20230612 10:04:21.762"/>
+</suite>
+<suite id="s1-s3" name="Form" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\testes\form.robot">
+<test id="s1-s3-t1" name="Cenario 01: Abrir site" line="25">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://itera-qa.azurewebsites.net/home/automation</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230612 10:04:21.770" level="INFO">Opening browser 'chrome' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
+<status status="PASS" starttime="20230612 10:04:21.770" endtime="20230612 10:04:24.727"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:21.769" endtime="20230612 10:04:24.728"/>
+</test>
+<test id="s1-s3-t2" name="Cenario 02: Preencher formulario" line="28">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_name}</arg>
+<arg>Vitor</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:24.731" level="INFO">Typing text 'Vitor' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20230612 10:04:24.731" endtime="20230612 10:04:24.817"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_phone}</arg>
+<arg>text=(11) 98680-3400</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:24.818" level="INFO">Typing text '(11) 98680-3400' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20230612 10:04:24.818" endtime="20230612 10:04:24.888"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<arg>text=vitor.devichu@hotmail.chrome</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:24.889" level="INFO">Typing text 'vitor.devichu@hotmail.chrome' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20230612 10:04:24.888" endtime="20230612 10:04:24.951"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>text=FFFHHHIII</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:24.952" level="INFO">Typing text 'FFFHHHIII' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230612 10:04:24.951" endtime="20230612 10:04:25.010"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_addres}</arg>
+<arg>text=Rua Tal numero tal</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:25.010" level="INFO">Typing text 'Rua Tal numero tal' into text field 'id:address'.</msg>
+<status status="PASS" starttime="20230612 10:04:25.010" endtime="20230612 10:04:25.071"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:24.730" endtime="20230612 10:04:25.071"/>
+</test>
+<test id="s1-s3-t3" name="Cenario 03: Clicar em submit" line="36">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:25.073" level="INFO">Clicking element 'name:submit'.</msg>
+<status status="PASS" starttime="20230612 10:04:25.073" endtime="20230612 10:04:25.108"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230612 10:04:30.108" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230612 10:04:25.108" endtime="20230612 10:04:30.108"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:25.072" endtime="20230612 10:04:30.109"/>
+</test>
+<test id="s1-s3-t4" name="Cenario 04: Clicar em check-box" line="40">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:30.115" level="INFO">Clicking element 'id:male'.</msg>
+<status status="PASS" starttime="20230612 10:04:30.114" endtime="20230612 10:04:30.211"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:30.113" endtime="20230612 10:04:30.212"/>
+</test>
+<test id="s1-s3-t5" name="Cenario 05: Clicar em contains" line="43">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_contains}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:30.217" level="INFO">Clicking element '//input[@type='checkbox'][1]'.</msg>
+<status status="PASS" starttime="20230612 10:04:30.216" endtime="20230612 10:04:30.273"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:30.215" endtime="20230612 10:04:30.273"/>
+</test>
+<test id="s1-s3-t6" name="Cenario 06: Clicar em contains" line="46">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_contains}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:30.275" level="INFO">Clicking element '//select[contains(@class,'custom-select')]'.</msg>
+<status status="PASS" starttime="20230612 10:04:30.274" endtime="20230612 10:04:30.320"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:30.274" endtime="20230612 10:04:30.320"/>
+</test>
+<test id="s1-s3-t7" name="Cenario 07: Clicar" line="49">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${option_value}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:30.322" level="INFO">Clicking element '//option[@value='1']'.</msg>
+<status status="PASS" starttime="20230612 10:04:30.321" endtime="20230612 10:04:30.353"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:30.321" endtime="20230612 10:04:30.353"/>
+</test>
+<test id="s1-s3-t8" name="Cenario 08: Clicar no checkbox e radiobutton" line="55">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${check_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:30.355" level="INFO">Clicking element '//label[@class='custom-control-label'][contains(.,'2 years')]'.</msg>
+<status status="PASS" starttime="20230612 10:04:30.355" endtime="20230612 10:04:30.405"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${radio_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 10:04:30.406" level="INFO">Clicking element '//label[@class='custom-control-label'][contains(.,'Selenium Webdriver')]'.</msg>
+<status status="PASS" starttime="20230612 10:04:30.406" endtime="20230612 10:04:30.447"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:30.355" endtime="20230612 10:04:30.447"/>
+</test>
+<status status="PASS" starttime="20230612 10:04:21.765" endtime="20230612 10:04:30.449"/>
+</suite>
+<suite id="s1-s4" name="Modelo" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\testes\modelo.robot">
+<test id="s1-s4-t1" name="Cenario 01: Acessando o site Robot" line="12">
+<kw name="Abrir site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://robotframework.org/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230612 10:04:30.454" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
+<status status="PASS" starttime="20230612 10:04:30.453" endtime="20230612 10:04:35.721"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230612 10:04:35.721" endtime="20230612 10:04:38.035"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:30.453" endtime="20230612 10:04:38.035"/>
+</kw>
+<status status="PASS" starttime="20230612 10:04:30.453" endtime="20230612 10:04:38.035"/>
+</test>
+<status status="PASS" starttime="20230612 10:04:30.450" endtime="20230612 10:04:38.037"/>
+</suite>
+<status status="PASS" starttime="20230612 10:03:52.505" endtime="20230612 10:04:38.039"/>
+</suite>
+<statistics>
+<total>
+<stat pass="13" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regressivo</stat>
+</tag>
+<suite>
+<stat pass="13" fail="0" skip="0" id="s1" name="Testes">Testes</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Bdd">Testes.Bdd</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="Estrutura">Testes.Estrutura</stat>
+<stat pass="8" fail="0" skip="0" id="s1-s3" name="Form">Testes.Form</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="Modelo">Testes.Modelo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
