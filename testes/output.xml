@@ -1,58 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230612 10:06:33.509" rpa="false" schemaversion="3">
-<suite id="s1" name="Estrutura" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\testes\estrutura.robot">
-<test id="s1-t1" name="Cenario 01: Abri site" line="17">
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230614 21:53:59.088" rpa="false" schemaversion="3">
+<suite id="s1" name="Bdd" source="C:\Users\devec\OneDrive\Área de Trabalho\Robot You Tube\testes\bdd.robot">
+<test id="s1-t1" name="Cenario 01: Executar video no site do you Tube" line="42">
+<kw name="Dado que acesso o site do you Tube">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.google.com/</arg>
-<arg>chrome</arg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230612 10:06:33.655" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20230612 10:06:33.655" endtime="20230612 10:06:35.807"/>
+<msg timestamp="20230614 21:53:59.247" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20230614 21:53:59.247" endtime="20230614 21:54:02.999"/>
+</kw>
+<status status="PASS" starttime="20230614 21:53:59.247" endtime="20230614 21:54:02.999"/>
+</kw>
+<kw name=" Quando digito o nome da musica">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Pesquisa}</arg>
+<arg>${NomeDaMusica}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230614 21:54:02.999" level="INFO">Typing text 'Ariana Grande Positions' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20230614 21:54:02.999" endtime="20230614 21:54:03.203"/>
+</kw>
+<status status="PASS" starttime="20230614 21:54:02.999" endtime="20230614 21:54:03.203"/>
+</kw>
+<kw name=" E clico no botao buscar">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230614 21:54:03.203" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<status status="PASS" starttime="20230614 21:54:03.203" endtime="20230614 21:54:03.299"/>
+</kw>
+<status status="PASS" starttime="20230614 21:54:03.203" endtime="20230614 21:54:03.299"/>
+</kw>
+<kw name="E clico na primeira opcao da lista">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Class_Primeiro}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230614 21:54:03.299" endtime="20230614 21:54:04.613"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Class_Primeiro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230614 21:54:04.613" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
+<status status="PASS" starttime="20230614 21:54:04.613" endtime="20230614 21:54:04.714"/>
+</kw>
+<status status="PASS" starttime="20230614 21:54:03.299" endtime="20230614 21:54:04.714"/>
+</kw>
+<kw name="Então o video e executado">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230614 21:54:04.714" endtime="20230614 21:54:05.825"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230614 21:54:05.896" level="INFO">Element '(//*[@id="top-level-buttons-computed"]/ytd-button-renderer)[1]' is displayed.</msg>
+<status status="PASS" starttime="20230614 21:54:05.825" endtime="20230614 21:54:05.896"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230614 21:54:06.902" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230614 21:54:05.896" endtime="20230614 21:54:06.902"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230612 10:06:35.808" endtime="20230612 10:06:37.924"/>
+<status status="PASS" starttime="20230614 21:54:06.902" endtime="20230614 21:54:09.192"/>
 </kw>
-<status status="PASS" starttime="20230612 10:06:33.654" endtime="20230612 10:06:37.926"/>
+<status status="PASS" starttime="20230614 21:54:04.714" endtime="20230614 21:54:09.192"/>
+</kw>
+<tag>regressivo</tag>
+<status status="PASS" starttime="20230614 21:53:59.235" endtime="20230614 21:54:09.192"/>
 </test>
-<test id="s1-t2" name="Cenario 02: Abrir site Alura" line="21">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.alura.com.br/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230612 10:06:37.932" level="INFO">Opening browser 'chrome' to base url 'https://www.alura.com.br/'.</msg>
-<status status="PASS" starttime="20230612 10:06:37.930" endtime="20230612 10:06:44.605"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230612 10:06:44.606" endtime="20230612 10:06:46.893"/>
-</kw>
-<status status="PASS" starttime="20230612 10:06:37.929" endtime="20230612 10:06:46.895"/>
-</test>
-<test id="s1-t3" name="Cenario 03: Abrir site You Tube" line="25">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.youtube.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230612 10:06:46.900" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
-<status status="PASS" starttime="20230612 10:06:46.899" endtime="20230612 10:06:51.371"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230612 10:06:51.371" endtime="20230612 10:06:53.490"/>
-</kw>
-<status status="PASS" starttime="20230612 10:06:46.898" endtime="20230612 10:06:53.492"/>
-</test>
-<status status="PASS" starttime="20230612 10:06:33.510" endtime="20230612 10:06:53.496"/>
+<status status="PASS" starttime="20230614 21:53:59.088" endtime="20230614 21:54:09.197"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">regressivo</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Estrutura">Estrutura</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Bdd">Bdd</stat>
 </suite>
 </statistics>
 <errors>
